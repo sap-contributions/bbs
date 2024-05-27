@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net"
 
-	"code.cloudfoundry.org/bbs/cmd/bbs/testrunner"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+	"github.com/sap-contributions/bbs/testrunner"
 	ginkgomon "github.com/tedsuo/ifrit/ginkgomon_v2"
 )
 

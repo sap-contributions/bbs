@@ -2,7 +2,7 @@ package main_test
 
 import (
 	"code.cloudfoundry.org/bbs"
-	"code.cloudfoundry.org/bbs/cmd/bbs/testrunner"
+	"github.com/sap-contributions/bbs/testrunner"
 
 	ginkgomon "github.com/tedsuo/ifrit/ginkgomon_v2"
 

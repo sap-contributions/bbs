@@ -3,9 +3,9 @@ package main_test
 import (
 	"time"
 
-	"code.cloudfoundry.org/bbs/cmd/bbs/testrunner"
 	"code.cloudfoundry.org/diego-logging-client/testhelpers"
 	"code.cloudfoundry.org/go-loggregator/v9/rpc/loggregator_v2"
+	"github.com/sap-contributions/bbs/testrunner"
 	ginkgomon "github.com/tedsuo/ifrit/ginkgomon_v2"
 
 	. "github.com/onsi/ginkgo/v2"

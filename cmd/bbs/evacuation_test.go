@@ -1,10 +1,10 @@
 package main_test
 
 import (
-	"code.cloudfoundry.org/bbs/cmd/bbs/testrunner"
 	"code.cloudfoundry.org/bbs/events"
 	"code.cloudfoundry.org/bbs/models"
 	"code.cloudfoundry.org/bbs/models/test/model_helpers"
+	"github.com/sap-contributions/bbs/testrunner"
 	ginkgomon "github.com/tedsuo/ifrit/ginkgomon_v2"
 
 	. "github.com/onsi/ginkgo/v2"

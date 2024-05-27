@@ -5,9 +5,9 @@ import (
 	"path"
 
 	"code.cloudfoundry.org/bbs"
-	"code.cloudfoundry.org/bbs/cmd/bbs/testrunner"
 	"code.cloudfoundry.org/bbs/models/test/model_helpers"
 	"code.cloudfoundry.org/tlsconfig"
+	"github.com/sap-contributions/bbs/testrunner"
 	"github.com/tedsuo/ifrit"
 	ginkgomon "github.com/tedsuo/ifrit/ginkgomon_v2"
 

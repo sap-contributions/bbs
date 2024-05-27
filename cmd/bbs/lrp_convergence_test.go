@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"code.cloudfoundry.org/bbs"
-	"code.cloudfoundry.org/bbs/cmd/bbs/testrunner"
 	"code.cloudfoundry.org/bbs/db/sqldb"
 	"code.cloudfoundry.org/bbs/db/sqldb/helpers"
 	"code.cloudfoundry.org/bbs/db/sqldb/helpers/monitor"
@@ -21,6 +20,7 @@ import (
 	"code.cloudfoundry.org/durationjson"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+	"github.com/sap-contributions/bbs/testrunner"
 	ginkgomon "github.com/tedsuo/ifrit/ginkgomon_v2"
 )
 

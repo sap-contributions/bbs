@@ -14,7 +14,6 @@ import (
 	"google.golang.org/grpc/grpclog"
 
 	"code.cloudfoundry.org/bbs"
-	bbsconfig "code.cloudfoundry.org/bbs/cmd/bbs/config"
 	"code.cloudfoundry.org/bbs/encryption"
 	"code.cloudfoundry.org/bbs/test_helpers"
 	"code.cloudfoundry.org/bbs/test_helpers/sqlrunner"
@@ -33,6 +32,7 @@ import (
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gexec"
 	"github.com/onsi/gomega/ghttp"
+	bbsconfig "github.com/sap-contributions/bbs/config"
 	"github.com/tedsuo/ifrit"
 	ginkgomon "github.com/tedsuo/ifrit/ginkgomon_v2"
 
@@ -73,7 +73,7 @@ func TestBBS(t *testing.T) {
 
 var _ = SynchronizedBeforeSuite(
 	func() []byte {
-		bbsPath, err := gexec.Build("code.cloudfoundry.org/bbs/cmd/bbs", "-race")
+		bbsPath, err := gexec.Build("github.com/sap-contributions/bbs", "-race")
 		Expect(err).NotTo(HaveOccurred())
 
 		locketPath, err := gexec.Build("code.cloudfoundry.org/locket/cmd/locket", "-race")

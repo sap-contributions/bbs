@@ -6,12 +6,12 @@ import (
 	"io"
 	"os"
 
-	"code.cloudfoundry.org/bbs/cmd/bbs/testrunner"
 	"code.cloudfoundry.org/bbs/db/sqldb/helpers"
 	"code.cloudfoundry.org/bbs/models"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gexec"
+	"github.com/sap-contributions/bbs/testrunner"
 	ginkgomon "github.com/tedsuo/ifrit/ginkgomon_v2"
 )
 
@@ -36,7 +36,7 @@ var _ = Describe("Migration Version", func() {
 		err = migrationFile.Close()
 		Expect(err).NotTo(HaveOccurred())
 
-		bbsPath, err := gexec.Build("code.cloudfoundry.org/bbs/cmd/bbs", "-race")
+		bbsPath, err := gexec.Build("github.com/sap-contributions/bbs", "-race")
 		Expect(err).NotTo(HaveOccurred())
 		bbsBinPath = string(bbsPath)
 
@@ -48,7 +48,7 @@ var _ = Describe("Migration Version", func() {
 		err := os.RemoveAll(migrationFilePath)
 		Expect(err).NotTo(HaveOccurred())
 
-		bbsConfig, err := gexec.Build("code.cloudfoundry.org/bbs/cmd/bbs", "-race")
+		bbsConfig, err := gexec.Build("github.com/sap-contributions/bbs", "-race")
 		Expect(err).NotTo(HaveOccurred())
 		bbsBinPath = string(bbsConfig)
 	})
